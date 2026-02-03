@@ -1,6 +1,6 @@
 [![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/jkpe/claude-code-digitalocean/tree/main)
 
-# Use DigitalOcean Serverless inference with Claude Code.
+# Using DigitalOcean Serverless Inference as a Gateway for Claude Code
 
 Did you know you can use DigitalOcean Serverless Inference endpoint with Claude Code?
 
