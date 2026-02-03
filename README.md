@@ -46,14 +46,25 @@ We use Litellm, hosted on DigitalOcean App Platform, to proxy requests from Clau
 4. Add DigitalOcean Serverless Inference API Endpoint to the gateway in the UI. [Here are the steps with screenshots.](https://docs.litellm.ai/docs/proxy/ui_credentials)
 
 - Provider: `OpenAI-Compatible Endpoints`
-- LiteLLM Model Name: `anthropic-claude-4.5-sonnet`
+- LiteLLM Model Name: `anthropic-claude-4.5-sonnet` (this is the model name that is passed to the DigitalOcean Serverless Inference API Endpoint)
 - Model Name: `digitalocean-anthropic-claude-4.5-sonnet` (this is the model name that Claude Code will use, set it to whatever you want, it will be used as the `ANTHROPIC_MODEL` environment variable in Claude Code)
 - API Base: `https://inference.do-ai.run/v1`
 - API Key: Generate it here: [https://cloud.digitalocean.com/gen-ai/model-access-keys](https://cloud.digitalocean.com/gen-ai/model-access-keys).
 
+LiteLLM web user interface:
+
 <a href="./screenshots/litellm-ui.png"><img src="./screenshots/litellm-ui.png" alt="LiteLLM web user interface" width="300" /></a>
+
+LiteLLM deployed to DigitalOcean App Platform:
+
 <a href="./screenshots/litellm-deployed.png"><img src="./screenshots/litellm-deployed.png" alt="LiteLLM deployed to DigitalOcean App Platform" width="300" /></a>
+
+Adding the DigitalOcean Serverless Inference API Endpoint to the LiteLLM gateway:
+
 <a href="./screenshots/add-model.png"><img src="./screenshots/add-model.png" alt="LiteLLM with DigitalOcean Serverless Inference API Endpoint added" width="300" /></a>
+
+LiteLLM with DigitalOcean Serverless Inference API Endpoint added:
+
 <a href="./screenshots/add-do.png"><img src="./screenshots/add-do.png" alt="LiteLLM with DigitalOcean Serverless Inference API Endpoint added" width="300" /></a>
 
 ### Configuring Claude Code to use the gateway
@@ -74,4 +85,16 @@ export ANTHROPIC_AUTH_TOKEN=sk-litellm-key
 export CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1
 ```
 
-Start Claude Code
+### Testing Claude Code with the gateway
+
+Start Claude Code `claude` and you should see your custom model noted at the top
+
+![image of Claude Code with DigitalOcean Serverless Inference API Endpoint added](./screenshots/claude-code-digitalocean.png)
+
+Send Claude Code a message and you should see the response as usual.
+
+![image of Claude Code with DigitalOcean Serverless Inference API Endpoint added](./screenshots/claude-code-digitalocean-test.png)
+
+Browse to the LiteLLM web user interface and you should see the request and response in the logs.
+
+![image of LiteLLM web user interface with request and response in the logs](./screenshots/litellm-logs.png)
