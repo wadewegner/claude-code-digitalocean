@@ -48,6 +48,9 @@ spec:
     - key: STORE_MODEL_IN_DB
       scope: RUN_TIME
       value: "True"
+    - key: STORE_PROMPTS_IN_SPEND_LOGS
+      scope: RUN_TIME
+      value: "False"
     - key: LITELLM_DROP_PARAMS
       scope: RUN_TIME
       value: "True"

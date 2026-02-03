@@ -41,6 +41,8 @@ We use Litellm, hosted on DigitalOcean App Platform, to proxy requests from Clau
    | `UI_USERNAME`         | Username for accessing the LiteLLM web user interface            |
    | `UI_PASSWORD`         | Password for accessing the LiteLLM web user interface                       |
 
+   (optional) Set the `STORE_PROMPTS_IN_SPEND_LOGS` environment variable to `True` to enable storing prompt requests and responses in logs.
+
 3. Once deployed, browse to the app URL and login with the username and password you set. `https://your-app-name.ondigitalocean.app/ui`
 
 4. Add DigitalOcean Serverless Inference API Endpoint to the gateway in the UI. [Here are the steps with screenshots.](https://docs.litellm.ai/docs/proxy/ui_credentials)
