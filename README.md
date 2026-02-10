@@ -47,7 +47,7 @@ We use Litellm, hosted on DigitalOcean App Platform, to proxy requests from Clau
 
 4. Add DigitalOcean Serverless Inference API Endpoint to the gateway in the UI. [Here are the steps with screenshots.](https://docs.litellm.ai/docs/proxy/ui_credentials)
 
-- Provider: `OpenAI-Compatible Endpoints`
+- Provider: `OpenAI-Compatible Endpoints (Together AI, etc.)`
 - LiteLLM Model Name: `anthropic-claude-4.5-sonnet` (this is the model name that is passed to the DigitalOcean Serverless Inference API Endpoint)
 - Model Name: `digitalocean-anthropic-claude-4.5-sonnet` (this is the model name that Claude Code will use, set it to whatever you want, it will be used as the `ANTHROPIC_MODEL` environment variable in Claude Code)
 - API Base: `https://inference.do-ai.run/v1`
